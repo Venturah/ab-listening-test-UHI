@@ -53,7 +53,9 @@ window.onload = () => {
   const container = document.getElementById("testContainer");
 
   tests.forEach((test, index) => {
-    const section = document.createElement("div");
+const section = document.createElement("div");
+section.classList.add("test-section");
+
     section.innerHTML = `
       <h3>${test.category}: ${test.track}</h3>
       <audio id="audioA${index}" src="${test.a}" controls></audio><br>
