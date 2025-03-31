@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A/B Listening Test</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>A/B Listening Test</h1>
+
+  <form id="demographicForm">
+    <label>Age: <input type="number" name="age" required></label><br>
+    <label>Gender:
+      <select name="gender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </label><br>
+      <label>Audio Experience:
+        <select name="experience" required>
+          <option value="">Select</option>
+          <option>None</option>
+          <option>Hobbyist</option>
+          <option>Professional</option>
+        </select>
+      </label><br>
+      <label>Describe your listening setup (e.g. headphones, interface, DAC, etc.):<br>
+        <textarea name="setup" rows="3" cols="50" placeholder="e.g. Audio-Technica M50x + Scarlett 2i2" required></textarea>
+      </label><br><br>
+  </form>
+
+  <div id="testContainer"></div>
+  <button onclick="submitResults()">Submit Test</button>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
 <!-- your index.html will go here -->
