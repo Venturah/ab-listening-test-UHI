@@ -33,20 +33,15 @@ button {
   font-size: 1rem;
   margin-top: 1rem;
   
-.consent-confirmation {
-  margin: 1rem 0;
+.consent-confirmation input[type="checkbox"] {
+  position: relative;
+  top: 2px; /* You can adjust this by 1px if needed */
+  margin-right: 0.5rem;
 }
 
-.consent-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+.consent-confirmation label {
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.4;
 }
 
-.consent-label input[type="checkbox"] {
-  margin: 0;
-  transform: translateY(1px);
-}
