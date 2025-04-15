@@ -32,19 +32,20 @@ button {
   padding: 0.8rem 1.2rem;
   font-size: 1rem;
   margin-top: 1rem;
-}
-.consent-confirmation input[type="checkbox"] {
-  vertical-align: middle;
-  margin-right: 0.5rem;
+  
 .consent-confirmation {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.consent-confirmation label {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 .consent-confirmation input[type="checkbox"] {
-  margin-right: 0.5rem;
-  transform: scale(1.2); /* optional: makes it more tappable on mobile */
+  transform: scale(1.2);
+  margin: 0;
 }
