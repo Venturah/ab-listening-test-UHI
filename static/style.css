@@ -37,15 +37,16 @@ button {
   margin: 1rem 0;
 }
 
-.consent-confirmation label {
-  display: flex;
+.consent-label {
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   font-weight: 500;
+  font-size: 1rem;
   line-height: 1.4;
 }
 
-.consent-confirmation input[type="checkbox"] {
-  transform: scale(1.2);
+.consent-label input[type="checkbox"] {
   margin: 0;
+  transform: translateY(1px);
 }
