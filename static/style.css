@@ -33,3 +33,13 @@ button {
   font-size: 1rem;
   margin-top: 1rem;
 }
+.consent-confirmation input[type="checkbox"] {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.consent-confirmation {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
