@@ -36,10 +36,15 @@ button {
 .consent-confirmation input[type="checkbox"] {
   vertical-align: middle;
   margin-right: 0.5rem;
-}
-
 .consent-confirmation {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.consent-confirmation input[type="checkbox"] {
+  margin-right: 0.5rem;
+  transform: scale(1.2); /* optional: makes it more tappable on mobile */
 }
