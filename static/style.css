@@ -1,52 +1,141 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 1rem;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A/B Listening Test</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <h1>A/B Listening Test</h1>
 
-form label {
-  display: block;
-  margin: 0.5rem 0 0.2rem;
-}
+      <div class="info-links">
+        <p><strong>Before beginning the listening test, please read the following documents:</strong></p>
+        <ul>
+          <li>
+            📘
+            <a
+              href="https://dl.dropboxusercontent.com/scl/fi/e7i4985wuf1ox88c1i491/UHI-Research-Ethics-Iain-McClosky.pdf?rlkey=j0khxijgncezam9jywaeevlmc&dl=0"
+              target="_blank"
+              rel="noopener"
+            >
+              Participant Information Sheet
+            </a>
+          </li>
+          <li>
+            📄
+            <a
+              href="https://dl.dropboxusercontent.com/scl/fi/4uc8sh213d6u6575c3k28/CONSENT-FORM-12007248-IAIN-MCCLOSKY.pdf?rlkey=oaxlfo7hg3r13vki2c2ijalsw&dl=0"
+              target="_blank"
+              rel="noopener"
+            >
+              Consent Form (optional)
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
-input, select, textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  font-size: 1rem;
-}
+    <section class="form-section">
+      <h2>Participant Information</h2>
 
-audio {
-  width: 100%;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
-}
+      <form id="demographicForm">
+        <label>
+          Age:
+          <input type="number" name="age" min="16" max="99" inputmode="numeric" required>
+        </label>
 
-div.test-section {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
-}
+        <label>
+          Gender:
+          <select name="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+            <option>Prefer not to say</option>
+          </select>
+        </label>
 
-button {
-  padding: 0.8rem 1.2rem;
-  font-size: 1rem;
-  margin-top: 1rem;
-  
-.consent-confirmation {
-  margin: 1.5rem 0;
-}
+        <label>
+          Audio experience:
+          <select name="experience" required>
+            <option value="">Select</option>
+            <option>None</option>
+            <option>Hobbyist</option>
+            <option>Student</option>
+            <option>Professional</option>
+          </select>
+        </label>
 
-.consent-confirmation label {
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.5;
-  display: inline-block;
-  cursor: pointer;
-}
+        <label>
+          Device:
+          <select name="device" required>
+            <option value="">Select</option>
+            <option>iPhone</option>
+            <option>Android phone</option>
+            <option>Windows laptop/desktop</option>
+            <option>Mac</option>
+            <option>Other</option>
+          </select>
+        </label>
 
-.consent-confirmation input[type="checkbox"] {
-  margin-right: 0.5rem;
-  vertical-align: middle;
-}
+        <label>
+          Listening method:
+          <select name="output" required>
+            <option value="">Select</option>
+            <option>Bluetooth earbuds/headphones (e.g., AirPods)</option>
+            <option>Wired headphones</option>
+            <option>Built-in speakers</option>
+            <option>Audio interface / DAC</option>
+          </select>
+        </label>
 
+        <label>
+          Listening environment:
+          <select name="environment" required>
+            <option value="">Select</option>
+            <option>Quiet room</option>
+            <option>Some background noise</option>
+            <option>Noisy environment</option>
+          </select>
+        </label>
+
+        <label>
+          Any known hearing issues?
+          <select name="hearing" required>
+            <option value="">Select</option>
+            <option>No</option>
+            <option>Yes</option>
+            <option>Prefer not to say</option>
+          </select>
+        </label>
+
+        <label>
+          Describe your listening setup (e.g., AirPods, wired headphones, speakers, interface/DAC):
+          <textarea
+            name="setup"
+            rows="3"
+            placeholder="e.g. AirPods Pro (Bluetooth) on iPhone"
+            required
+          ></textarea>
+        </label>
+      </form>
+    </section>
+
+    <section class="test-section">
+      <h2>Listening Test</h2>
+      <p class="hint">Tip: Use a consistent volume and avoid switching devices during the test.</p>
+
+      <div id="testContainer"></div>
+
+      <div class="submit-row">
+        <button type="button" id="submitBtn" onclick="submitResults()">Submit Test</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="/static/main.js"></script>
+</body>
+</html>
