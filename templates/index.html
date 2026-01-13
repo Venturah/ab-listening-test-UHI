@@ -2,66 +2,142 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A/B Listening Test</title>
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <h1>A/B Listening Test</h1>
-  <div class="info-links">
-  <p><strong>Before beginning the listening test, participants are advised to read the following documents and may sign the consent form if they wish:</strong></p>
-  <ul>
-    <li>
-      📘 <a href="https://dl.dropboxusercontent.com/scl/fi/e7i4985wuf1ox88c1i491/UHI-Research-Ethics-Iain-McClosky.pdf?rlkey=j0khxijgncezam9jywaeevlmc&dl=0" target="_blank">
-        Participant Information Sheet
-      </a>
-    </li>
-    <li>
-      📄 <a href="https://dl.dropboxusercontent.com/scl/fi/4uc8sh213d6u6575c3k28/CONSENT-FORM-12007248-IAIN-MCCLOSKY.pdf?rlkey=oaxlfo7hg3r13vki2c2ijalsw&dl=0" target="_blank">
-        Consent Form (optional)
-      </a>
-    </li>
-  </ul>
-<div class="consent-confirmation">
-  <label>
-    <input type="checkbox" name="consent_read" required>
-    I confirm that I have read the Participant Information Sheet and understand the purpose of this test.
-  </label>
-</div>
+  <main class="page">
+    <header class="header">
+      <h1>A/B Listening Test</h1>
 
+      <div class="info-links">
+        <p><strong>Before beginning the listening test, please read the following documents:</strong></p>
+        <ul>
+          <li>
+            📘
+            <a
+              href="https://dl.dropboxusercontent.com/scl/fi/e7i4985wuf1ox88c1i491/UHI-Research-Ethics-Iain-McClosky.pdf?rlkey=j0khxijgncezam9jywaeevlmc&dl=0"
+              target="_blank"
+              rel="noopener"
+            >
+              Participant Information Sheet
+            </a>
+          </li>
+          <li>
+            📄
+            <a
+              href="https://dl.dropboxusercontent.com/scl/fi/4uc8sh213d6u6575c3k28/CONSENT-FORM-12007248-IAIN-MCCLOSKY.pdf?rlkey=oaxlfo7hg3r13vki2c2ijalsw&dl=0"
+              target="_blank"
+              rel="noopener"
+            >
+              Consent Form (optional)
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
 
-<br>
+    <section class="form-section">
+      <h2>Participant Information</h2>
 
-<div id="mobile-warning" style="background-color: #ffcccc; color: #990000; padding: 1rem; text-align: center; font-weight: bold;">
-  ⚠️ This test does not work on mobile phones or iPads. Please use a desktop or laptop computer.
-</div>
+      <form id="demographicForm">
+        <label>
+          Age:
+          <input type="number" name="age" min="16" max="99" inputmode="numeric" required>
+        </label>
 
-  <form id="demographicForm">
-    <label>Age: <input type="number" name="age" required></label><br>
-    <label>Gender:
-      <select name="gender" required>
-        <option value="">Select</option>
-        <option>Male</option>
-        <option>Female</option>
-        <option>Other</option>
-      </select>
-    </label><br>
-      <label>Audio Experience:
-        <select name="experience" required>
-          <option value="">Select</option>
-          <option>None</option>
-          <option>Hobbyist</option>
-          <option>Professional</option>
-        </select>
-      </label><br>
-      <label>Describe your listening setup (e.g. headphones, interface, DAC, etc.):<br>
-        <textarea name="setup" rows="3" cols="50" placeholder="e.g. Audio-Technica M50x + Scarlett 2i2" required></textarea>
-      </label><br><br>
-  </form>
+        <label>
+          Gender:
+          <select name="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+            <option>Prefer not to say</option>
+          </select>
+        </label>
 
-  <div id="testContainer"></div>
-  <button onclick="submitResults()">Submit Test</button>
+        <label>
+          Audio experience:
+          <select name="experience" required>
+            <option value="">Select</option>
+            <option>None</option>
+            <option>Hobbyist</option>
+            <option>Student</option>
+            <option>Professional</option>
+          </select>
+        </label>
+
+        <label>
+          Device:
+          <select name="device" required>
+            <option value="">Select</option>
+            <option>iPhone</option>
+            <option>Android phone</option>
+            <option>Windows laptop/desktop</option>
+            <option>Mac</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label>
+          Listening method:
+          <select name="output" required>
+            <option value="">Select</option>
+            <option>Bluetooth earbuds/headphones (e.g., AirPods)</option>
+            <option>Wired headphones</option>
+            <option>Built-in speakers</option>
+            <option>Audio interface / DAC</option>
+          </select>
+        </label>
+
+        <label>
+          Listening environment:
+          <select name="environment" required>
+            <option value="">Select</option>
+            <option>Quiet room</option>
+            <option>Some background noise</option>
+            <option>Noisy environment</option>
+          </select>
+        </label>
+
+        <label>
+          Any known hearing issues?
+          <select name="hearing" required>
+            <option value="">Select</option>
+            <option>No</option>
+            <option>Yes</option>
+            <option>Prefer not to say</option>
+          </select>
+        </label>
+
+        <label>
+          Describe your listening setup (e.g., AirPods, wired headphones, speakers, interface/DAC):
+          <textarea
+            name="setup"
+            rows="3"
+            placeholder="e.g. AirPods Pro (Bluetooth) on iPhone"
+            required
+          ></textarea>
+        </label>
+      </form>
+    </section>
+
+    <section class="test-section">
+      <h2>Listening Test</h2>
+      <p class="hint">Tip: Use a consistent volume and avoid switching devices during the test.</p>
+
+      <div id="testContainer"></div>
+
+      <div class="submit-row">
+        <button type="button" id="submitBtn" onclick="submitResults()">Submit Test</button>
+      </div>
+    </section>
+  </main>
 
   <script src="/static/main.js"></script>
 </body>
 </html>
+
 <!-- your index.html will go here -->
