@@ -8,7 +8,7 @@
 const tests = [
   {
     category: "Three Drives – Greece 2000",
-    track: "256k AAC vs 128k AAC",
+    track: "Compare A and B",
     referenceLabel: "Reference (WAV)",
     reference: "https://dl.dropboxusercontent.com/scl/fi/5g2u1co5yj1yyux3pvzt0/Three_Drives-Greece_2000_.wav?rlkey=exp0tlp5ye7xdvpfh1adx4arv",
     a: "https://dl.dropboxusercontent.com/scl/fi/rd4mbmrm2i38m344ombhj/Three_Drives-Greece_2000__256k_aac.m4a?rlkey=o5qhjrdfjciyiatootgwhx0a9",
@@ -16,7 +16,7 @@ const tests = [
   },
   {
     category: "Potty Mouth – Favorite Food",
-    track: "256k AAC vs 128k AAC",
+    track: "Compare A and B",
     referenceLabel: "Reference (WAV)",
     reference: "https://dl.dropboxusercontent.com/scl/fi/9vab047lcaqb8wrvcnyzv/Potty_Mouth-Favorite_Food_.wav?rlkey=lx347ep5wcjq8h3oq4dtiyytb",
     a: "https://dl.dropboxusercontent.com/scl/fi/8tlj76qpgy2r2lh9s4k26/Potty_Mouth-Favorite_Food__256k_aac.m4a?rlkey=fwjyav15ka2fu5jzbewkg35oc",
@@ -24,7 +24,7 @@ const tests = [
   },
   {
     category: "Podcast Sample",
-    track: "256k AAC vs 128k AAC",
+    track: "Compare A and B",
     referenceLabel: "Reference (WAV)",
     reference: "https://dl.dropboxusercontent.com/scl/fi/bc4mjrf4jvatoczzvlsrc/Podcast_.wav?rlkey=5wgl48kqlzevw7qewloj85cj0",
     a: "https://dl.dropboxusercontent.com/scl/fi/ka0if6y4bmic1g6jwny5h/Podcast__256k_aac.m4a?rlkey=ddwhkssxu3suqj5gqu8xpx6yz",
@@ -32,7 +32,7 @@ const tests = [
   },
   {
     category: "High Command – Eclipse of the Dual Moons",
-    track: "256k AAC vs 128k AAC",
+    track: "Compare A and B",
     referenceLabel: "Reference (WAV)",
     reference: "https://dl.dropboxusercontent.com/scl/fi/kie5qx1co7fcvypgfvr0k/High_Command-Eclipse_of_the_Dual_Moons.wav?rlkey=uhwogv7tp0sl1weapt3wpqv3i",
     a: "https://dl.dropboxusercontent.com/scl/fi/ebz5f6atvstrrqk7ohyp2/High_Command-Eclipse_of_the_Dual_Moons_256k_aac.m4a?rlkey=yztbzurs1ihnyrtxczorhk5y4",
@@ -40,7 +40,7 @@ const tests = [
   },
   {
     category: "Harmony – Ecstasy",
-    track: "256k AAC vs 128k AAC",
+    track: "Compare A and B",
     referenceLabel: "Reference (WAV)",
     reference: "https://dl.dropboxusercontent.com/scl/fi/qgrehkcx77291eatb0dn3/Harmony_Ecstasy_.wav?rlkey=pm84cshtbk5gjkcm3l9pohiio",
     a: "https://dl.dropboxusercontent.com/scl/fi/gmw6iqiqsb9qberx4dmit/Harmony_Ecstasy__256k_aac.m4a?rlkey=2z5l7vjh1mmha84d4qibofn2l",
@@ -48,7 +48,7 @@ const tests = [
   },
   {
     category: "Danny Brown & underscores – Copycats",
-    track: "256k AAC vs 128k AAC",
+    track: "Compare A and B",
     referenceLabel: "Reference (WAV)",
     reference: "https://dl.dropboxusercontent.com/scl/fi/6x57smbo9prw2rls9z2q3/Danny_Brown-underscores-Copycats.wav?rlkey=icr1565g0k1evdxwzrvcjymvr",
     a: "https://dl.dropboxusercontent.com/scl/fi/rmzqaz0gux8i279y8ksp8/Danny_Brown_underscores-Copycats_256k_aac.m4a?rlkey=2odh1nd8l5lirpy84v0kgwt1r",
@@ -56,7 +56,7 @@ const tests = [
   },
   {
     category: "Bruckner – Symphony",
-    track: "256k AAC vs 128k AAC",
+    track: "Compare A and B",
     referenceLabel: "Reference (WAV)",
     reference: "https://dl.dropboxusercontent.com/scl/fi/qfqc77eb8p8fgupu54i1y/Bruckner_Symphony.wav?rlkey=j1x723iu92374d08m3dggc3fx",
     a: "https://dl.dropboxusercontent.com/scl/fi/yst7y68t4fo6hcixcmo6y/Bruckner_Symphony_256k_aac.m4a?rlkey=aa8wtpylkffg9sd1bwqrrjghl",
@@ -64,7 +64,7 @@ const tests = [
   },
   {
     category: "beabadoobee – Take A Bite",
-    track: "256k AAC vs 128k AAC",
+    track: "Compare A and B",
     referenceLabel: "Reference (WAV)",
     reference: "https://dl.dropboxusercontent.com/scl/fi/rlqar7ovx75udyhfnvqnj/beabadoobee-Take_A_Bite_.wav?rlkey=yo3uzdiy2jzwmxpzjoc8cs62k",
     a: "https://dl.dropboxusercontent.com/scl/fi/tawoewx059mcvmbu1cisy/beabadoobee-Take_A_Bite__256k_aac.m4a?rlkey=ofc5d3vc6chz9g1rl9qwe5flf",
