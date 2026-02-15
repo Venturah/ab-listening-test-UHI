@@ -6,43 +6,70 @@
 // Use .m4a (AAC), .mp3, or .wav for mobile participants.
 
 const tests = [
-  // For TODAY: keep only trials that will actually play on phones.
-  // Your WAV/WAV ones should work on iPhone + Android + desktop.
-  // Remove/replace FLAC/OGG trials until you re-encode.
-
   {
-    category: "Sample Rate",
-    track: "BeeMoved Sample – A vs B",
-    a: "https://dl.dropboxusercontent.com/scl/fi/strs7zkmid2y5b22nc2nw/Sample_BeeMoved_96kHz24bit.wav?rlkey=rp7twg4vwzmw3hf0ggkam4w05",
-    b: "https://dl.dropboxusercontent.com/scl/fi/3o33mfqke8vdsau3not9h/Sample_BeeMoved_44.1kHz24bit.wav?rlkey=trgyju2rhpkghss8wynkj9ecs"
+    category: "Three Drives – Greece 2000",
+    track: "256k AAC vs 128k AAC",
+    referenceLabel: "Reference (WAV)",
+    reference: "https://dl.dropboxusercontent.com/scl/fi/5g2u1co5yj1yyux3pvzt0/Three_Drives-Greece_2000_.wav?rlkey=exp0tlp5ye7xdvpfh1adx4arv",
+    a: "https://dl.dropboxusercontent.com/scl/fi/rd4mbmrm2i38m344ombhj/Three_Drives-Greece_2000__256k_aac.m4a?rlkey=o5qhjrdfjciyiatootgwhx0a9",
+    b: "https://dl.dropboxusercontent.com/scl/fi/pxn6txeadp10gkuqwvc0z/Three_Drives-Greece_2000__128k_aac.m4a?rlkey=98ln5vllnzb0qghw0zqipa5nb"
   },
   {
-    category: "Sample Rate",
-    track: "Speech Sample – A vs B",
-    a: "https://dl.dropboxusercontent.com/scl/fi/b851rh617ic74tj0b97cm/Speech-Sample-44.1khz-24bit.wav?rlkey=2gtzvxne84jd13th2t40ty49n",
-    b: "https://dl.dropboxusercontent.com/scl/fi/fyreuan90rld642n8t5z9/Speech-Sample-96kHz-24.wav?rlkey=p98hi80ji72abdb6w8l6zl75a"
+    category: "Potty Mouth – Favorite Food",
+    track: "256k AAC vs 128k AAC",
+    referenceLabel: "Reference (WAV)",
+    reference: "https://dl.dropboxusercontent.com/scl/fi/9vab047lcaqb8wrvcnyzv/Potty_Mouth-Favorite_Food_.wav?rlkey=lx347ep5wcjq8h3oq4dtiyytb",
+    a: "https://dl.dropboxusercontent.com/scl/fi/8tlj76qpgy2r2lh9s4k26/Potty_Mouth-Favorite_Food__256k_aac.m4a?rlkey=fwjyav15ka2fu5jzbewkg35oc",
+    b: "https://dl.dropboxusercontent.com/scl/fi/kwrzp0jq6551zygokp788/Potty_Mouth-Favorite_Food__128k_aac.m4a?rlkey=t3pfhsuvlra2kzlnvs62gojk1"
   },
   {
-    category: "Sample Rate",
-    track: "Synth Track – A vs B",
-    a: "https://dl.dropboxusercontent.com/scl/fi/orh3s6p7uwrfyjvv9hon3/Synth-with-Reverb-and-Crystalizer-44.1kHz-14-LUFS.wav?rlkey=1oocz6mwf0htxddjdj0cqo3tp",
-    b: "https://dl.dropboxusercontent.com/scl/fi/cyzpffbywxffgk0fq5hv6/Synth-with-Reverb-and-Crystalizer-96kHz-14LUFS.wav?rlkey=mi9rurc965fjif5g7e41jgoh8"
+    category: "Podcast Sample",
+    track: "256k AAC vs 128k AAC",
+    referenceLabel: "Reference (WAV)",
+    reference: "https://dl.dropboxusercontent.com/scl/fi/bc4mjrf4jvatoczzvlsrc/Podcast_.wav?rlkey=5wgl48kqlzevw7qewloj85cj0",
+    a: "https://dl.dropboxusercontent.com/scl/fi/ka0if6y4bmic1g6jwny5h/Podcast__256k_aac.m4a?rlkey=ddwhkssxu3suqj5gqu8xpx6yz",
+    b: "https://dl.dropboxusercontent.com/scl/fi/g7ol0wq737yequg1jd0cg/Podcast__128k_aac.m4a?rlkey=qpieomyl9zx4z765kb4u5aht4"
   },
   {
-    category: "Bit Depth",
-    track: "Classical Sample – A vs B",
-    a: "https://dl.dropboxusercontent.com/scl/fi/eqkprivccz3yfall4mhmx/Bruckner-Symphony-32bitdepth-Sample.wav?rlkey=rjybd5ep7i9gqtsfqvhpnzspy",
-    b: "https://dl.dropboxusercontent.com/scl/fi/pddf31pnx5l2m1t1aongb/Bruckner-Symphony-16bitdepth-Sample.wav?rlkey=ihzcynxiapfem1nevit2a9zrl"
+    category: "High Command – Eclipse of the Dual Moons",
+    track: "256k AAC vs 128k AAC",
+    referenceLabel: "Reference (WAV)",
+    reference: "https://dl.dropboxusercontent.com/scl/fi/kie5qx1co7fcvypgfvr0k/High_Command-Eclipse_of_the_Dual_Moons.wav?rlkey=uhwogv7tp0sl1weapt3wpqv3i",
+    a: "https://dl.dropboxusercontent.com/scl/fi/ebz5f6atvstrrqk7ohyp2/High_Command-Eclipse_of_the_Dual_Moons_256k_aac.m4a?rlkey=yztbzurs1ihnyrtxczorhk5y4",
+    b: "https://dl.dropboxusercontent.com/scl/fi/nxm8qf8h93r6fdl93m4tg/High_Command-Eclipse_of_the_Dual_Moons_128k_aac.m4a?rlkey=6xtme95dw9apjtt9505bg9k29"
   },
   {
-    category: "Bit Depth",
-    track: "Dub Techno Sample – A vs B",
-    a: "https://dl.dropboxusercontent.com/scl/fi/4uahd2vjpy2jsu1pjioqe/Dub-Techno-Synthesised-Track-44.1khz-16-bit.wav?rlkey=4q69u5yakgti56sjmc448uxel",
-    b: "https://dl.dropboxusercontent.com/scl/fi/vjs6ek6jrg3j85qbfi6in/Dub-Techno-Synthesised-Track-44.1khz-32-bit.wav?rlkey=10hw8r9fn2nzdricp300ir98p"
+    category: "Harmony – Ecstasy",
+    track: "256k AAC vs 128k AAC",
+    referenceLabel: "Reference (WAV)",
+    reference: "https://dl.dropboxusercontent.com/scl/fi/qgrehkcx77291eatb0dn3/Harmony_Ecstasy_.wav?rlkey=pm84cshtbk5gjkcm3l9pohiio",
+    a: "https://dl.dropboxusercontent.com/scl/fi/gmw6iqiqsb9qberx4dmit/Harmony_Ecstasy__256k_aac.m4a?rlkey=2z5l7vjh1mmha84d4qibofn2l",
+    b: "https://dl.dropboxusercontent.com/scl/fi/zzv9616e6wv2xb3fc1e94/Harmony_Ecstasy__128k_aac.m4a?rlkey=klgkn8tjp2ivtjsfr6qqpgm5t"
   },
-
-  // TEMP: keep MP3 vs FLAC/OGG OUT until you re-encode to WAV or M4A.
-  // Once you have a lossless WAV or AAC for the "B" file, we re-add bitrate trials.
+  {
+    category: "Danny Brown & underscores – Copycats",
+    track: "256k AAC vs 128k AAC",
+    referenceLabel: "Reference (WAV)",
+    reference: "https://dl.dropboxusercontent.com/scl/fi/6x57smbo9prw2rls9z2q3/Danny_Brown-underscores-Copycats.wav?rlkey=icr1565g0k1evdxwzrvcjymvr",
+    a: "https://dl.dropboxusercontent.com/scl/fi/rmzqaz0gux8i279y8ksp8/Danny_Brown_underscores-Copycats_256k_aac.m4a?rlkey=2odh1nd8l5lirpy84v0kgwt1r",
+    b: "https://dl.dropboxusercontent.com/scl/fi/yittg0pyckgpgoootciq6/Danny_Brown_underscores-Copycats_128k_aac.m4a?rlkey=qtcw7j2k8bbxgcrs1x34bmte5"
+  },
+  {
+    category: "Bruckner – Symphony",
+    track: "256k AAC vs 128k AAC",
+    referenceLabel: "Reference (WAV)",
+    reference: "https://dl.dropboxusercontent.com/scl/fi/qfqc77eb8p8fgupu54i1y/Bruckner_Symphony.wav?rlkey=j1x723iu92374d08m3dggc3fx",
+    a: "https://dl.dropboxusercontent.com/scl/fi/yst7y68t4fo6hcixcmo6y/Bruckner_Symphony_256k_aac.m4a?rlkey=aa8wtpylkffg9sd1bwqrrjghl",
+    b: "https://dl.dropboxusercontent.com/scl/fi/y27p4hdx2t1jotph01kl7/Bruckner_Symphony_128k_aac.m4a?rlkey=4353261m17liztbtkh0kulm0v"
+  },
+  {
+    category: "beabadoobee – Take A Bite",
+    track: "256k AAC vs 128k AAC",
+    referenceLabel: "Reference (WAV)",
+    reference: "https://dl.dropboxusercontent.com/scl/fi/rlqar7ovx75udyhfnvqnj/beabadoobee-Take_A_Bite_.wav?rlkey=yo3uzdiy2jzwmxpzjoc8cs62k",
+    a: "https://dl.dropboxusercontent.com/scl/fi/tawoewx059mcvmbu1cisy/beabadoobee-Take_A_Bite__256k_aac.m4a?rlkey=ofc5d3vc6chz9g1rl9qwe5flf",
+    b: "https://dl.dropboxusercontent.com/scl/fi/qhy0ggn4akfg9snooypdt/beabadoobee-Take_A_Bite__128k_aac.m4a?rlkey=dmfuwtmwskqf1h2ekdle3ovvb"
+  }
 ];
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/xrbpavzq";
@@ -75,11 +102,14 @@ function renderTrials() {
 
     section.innerHTML = `
       <div class="trial-header">
-        <div class="trial-title">${index + 1}. ${test.track}</div>
-        <div class="trial-meta">${test.category}</div>
+        <div class="trial-title">${index + 1}. ${test.category}</div>
+        <div class="trial-meta">${test.track}</div>
       </div>
 
+      <div class="trial-hint">Tip: Listen to the Reference first, then compare A vs B.</div>
+
       <div class="trial-controls">
+        <button type="button" class="btn btn-secondary" id="playRef${index}">${test.referenceLabel}</button>
         <button type="button" class="btn" id="playA${index}">Play A</button>
         <button type="button" class="btn" id="playB${index}">Play B</button>
         <button type="button" class="btn btn-secondary" id="stop${index}">Stop</button>
@@ -97,7 +127,7 @@ function renderTrials() {
 
       <details class="trial-notes">
         <summary>Optional: notes (what did you hear?)</summary>
-        <textarea name="notes${index}" rows="2" placeholder="E.g., clearer vocals, less harsh highs, tighter bass..."></textarea>
+        <textarea name="notes${index}" rows="2" placeholder="E.g., clearer vocals, less harsh highs, smeared transients..."></textarea>
       </details>
 
       <input type="hidden" name="flip${index}" value="${flip ? "1" : "0"}">
@@ -107,12 +137,14 @@ function renderTrials() {
 
     const player = document.getElementById(`player${index}`);
     const status = document.getElementById(`status${index}`);
+    const playRef = document.getElementById(`playRef${index}`);
     const playA = document.getElementById(`playA${index}`);
     const playB = document.getElementById(`playB${index}`);
     const stop = document.getElementById(`stop${index}`);
 
     const setStatus = (msg) => { status.textContent = msg; };
 
+    let playCountRef = 0;
     let playCountA = 0;
     let playCountB = 0;
 
@@ -125,23 +157,27 @@ function renderTrials() {
         setStatus(`Playing ${label}…`);
         await player.play();
 
+        if (label === "Reference") playCountRef++;
         if (label === "A") playCountA++;
         if (label === "B") playCountB++;
 
+        section.dataset.playCountRef = String(playCountRef);
         section.dataset.playCountA = String(playCountA);
         section.dataset.playCountB = String(playCountB);
+        section.dataset.presentedRef = test.reference;
         section.dataset.presentedA = urlA;
         section.dataset.presentedB = urlB;
         section.dataset.flip = flip ? "1" : "0";
       } catch (e) {
         console.error(e);
-        setStatus(`Couldn't play ${label}. Use .m4a/.mp3/.wav for mobile.`);
-        alert(`Audio failed for ${label}.\n\nIf you're on iPhone/Safari, FLAC and OGG usually won't play.\nUse AAC (.m4a), MP3, or WAV.`);
+        setStatus(`Couldn't play ${label}.`);
       }
     }
 
+    playRef.addEventListener("click", () => play(test.reference, "Reference"));
     playA.addEventListener("click", () => play(urlA, "A"));
     playB.addEventListener("click", () => play(urlB, "B"));
+
     stop.addEventListener("click", () => {
       player.pause();
       try { player.currentTime = 0; } catch {}
@@ -149,9 +185,6 @@ function renderTrials() {
     });
 
     player.addEventListener("ended", () => setStatus("Finished."));
-    player.addEventListener("pause", () => {
-      if (player.currentTime > 0) setStatus("Paused.");
-    });
   });
 }
 
@@ -166,9 +199,11 @@ function collectResponses() {
       track: test.track,
       choice: choice ? choice.value : "No response",
       notes: notes ? (notes.value || "").trim() : "",
+      playCountRef: card?.dataset.playCountRef ? Number(card.dataset.playCountRef) : 0,
       playCountA: card?.dataset.playCountA ? Number(card.dataset.playCountA) : 0,
       playCountB: card?.dataset.playCountB ? Number(card.dataset.playCountB) : 0,
       flipped: card?.dataset.flip === "1",
+      referenceUrl: card?.dataset.presentedRef || "",
       presentedAUrl: card?.dataset.presentedA || "",
       presentedBUrl: card?.dataset.presentedB || ""
     };
