@@ -100,6 +100,16 @@ function renderTrials() {
     const urlA = flip ? test.b : test.a;
     const urlB = flip ? test.a : test.b;
 
+    // ✅ IMPORTANT FIX:
+    // Record mapping immediately so it's saved even if the participant never presses play.
+    section.dataset.presentedRef = test.reference;
+    section.dataset.presentedA = urlA;
+    section.dataset.presentedB = urlB;
+    section.dataset.flip = flip ? "1" : "0";
+    section.dataset.playCountRef = "0";
+    section.dataset.playCountA = "0";
+    section.dataset.playCountB = "0";
+
     section.innerHTML = `
       <div class="trial-header">
         <div class="trial-title">${index + 1}. ${test.category}</div>
@@ -164,10 +174,6 @@ function renderTrials() {
         section.dataset.playCountRef = String(playCountRef);
         section.dataset.playCountA = String(playCountA);
         section.dataset.playCountB = String(playCountB);
-        section.dataset.presentedRef = test.reference;
-        section.dataset.presentedA = urlA;
-        section.dataset.presentedB = urlB;
-        section.dataset.flip = flip ? "1" : "0";
       } catch (e) {
         console.error(e);
         setStatus(`Couldn't play ${label}.`);
@@ -256,3 +262,4 @@ async function submitResults() {
 window.addEventListener("load", () => {
   renderTrials();
 });
+
