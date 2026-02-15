@@ -1,141 +1,174 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A/B Listening Test</title>
-  <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
-  <main class="page">
-    <header class="header">
-      <h1>A/B Listening Test</h1>
+/* static/style.css — minimal academic styling */
 
-      <div class="info-links">
-        <p><strong>Before beginning the listening test, please read the following documents:</strong></p>
-        <ul>
-          <li>
-            📘
-            <a
-              href="https://dl.dropboxusercontent.com/scl/fi/e7i4985wuf1ox88c1i491/UHI-Research-Ethics-Iain-McClosky.pdf?rlkey=j0khxijgncezam9jywaeevlmc&dl=0"
-              target="_blank"
-              rel="noopener"
-            >
-              Participant Information Sheet
-            </a>
-          </li>
-          <li>
-            📄
-            <a
-              href="https://dl.dropboxusercontent.com/scl/fi/4uc8sh213d6u6575c3k28/CONSENT-FORM-12007248-IAIN-MCCLOSKY.pdf?rlkey=oaxlfo7hg3r13vki2c2ijalsw&dl=0"
-              target="_blank"
-              rel="noopener"
-            >
-              Consent Form (optional)
-            </a>
-          </li>
-        </ul>
-      </div>
-    </header>
+:root {
+  --text: #111;
+  --muted: #555;
+  --border: #ccc;
+  --bg: #fff;
+  --soft: #f7f7f7;
+}
 
-    <section class="form-section">
-      <h2>Participant Information</h2>
+* { box-sizing: border-box; }
 
-      <form id="demographicForm">
-        <label>
-          Age:
-          <input type="number" name="age" min="16" max="99" inputmode="numeric" required>
-        </label>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.4;
+}
 
-        <label>
-          Gender:
-          <select name="gender" required>
-            <option value="">Select</option>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-            <option>Prefer not to say</option>
-          </select>
-        </label>
+.page {
+  max-width: 860px;
+  margin: 24px auto;
+  padding: 16px;
+}
 
-        <label>
-          Audio experience:
-          <select name="experience" required>
-            <option value="">Select</option>
-            <option>None</option>
-            <option>Hobbyist</option>
-            <option>Student</option>
-            <option>Professional</option>
-          </select>
-        </label>
+.header {
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
 
-        <label>
-          Device:
-          <select name="device" required>
-            <option value="">Select</option>
-            <option>iPhone</option>
-            <option>Android phone</option>
-            <option>Windows laptop/desktop</option>
-            <option>Mac</option>
-            <option>Other</option>
-          </select>
-        </label>
+h1 {
+  margin: 0 0 10px;
+  font-size: 1.6rem;
+}
 
-        <label>
-          Listening method:
-          <select name="output" required>
-            <option value="">Select</option>
-            <option>Bluetooth earbuds/headphones (e.g., AirPods)</option>
-            <option>Wired headphones</option>
-            <option>Built-in speakers</option>
-            <option>Audio interface / DAC</option>
-          </select>
-        </label>
+h2 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
 
-        <label>
-          Listening environment:
-          <select name="environment" required>
-            <option value="">Select</option>
-            <option>Quiet room</option>
-            <option>Some background noise</option>
-            <option>Noisy environment</option>
-          </select>
-        </label>
+.info-links p {
+  margin: 8px 0;
+}
 
-        <label>
-          Any known hearing issues?
-          <select name="hearing" required>
-            <option value="">Select</option>
-            <option>No</option>
-            <option>Yes</option>
-            <option>Prefer not to say</option>
-          </select>
-        </label>
+.info-links ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}
 
-        <label>
-          Describe your listening setup (e.g., AirPods, wired headphones, speakers, interface/DAC):
-          <textarea
-            name="setup"
-            rows="3"
-            placeholder="e.g. AirPods Pro (Bluetooth) on iPhone"
-            required
-          ></textarea>
-        </label>
-      </form>
-    </section>
+.info-links li {
+  margin: 6px 0;
+}
 
-    <section class="test-section">
-      <h2>Listening Test</h2>
-      <p class="hint">Tip: Use a consistent volume and avoid switching devices during the test.</p>
+a {
+  color: #0b57d0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
-      <div id="testContainer"></div>
+.form-section,
+.test-section {
+  margin: 18px 0;
+  padding: 14px;
+  background: var(--soft);
+  border: 1px solid var(--border);
+}
 
-      <div class="submit-row">
-        <button type="button" id="submitBtn" onclick="submitResults()">Submit Test</button>
-      </div>
-    </section>
-  </main>
+label {
+  display: block;
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
 
-  <script src="/static/main.js"></script>
-</body>
-</html>
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+  font-size: 1rem;
+}
+
+textarea { resize: vertical; }
+
+.hint {
+  margin: 6px 0 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.trial-card {
+  margin: 14px 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+.trial-title {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.trial-meta {
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.trial-hint {
+  margin: 8px 0 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.trial-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0 10px;
+}
+
+button,
+.btn {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+button:hover,
+.btn:hover {
+  background: #f0f0f0;
+}
+
+.trial-status {
+  min-height: 18px;
+  margin: 6px 0 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.trial-choice {
+  border: 1px solid var(--border);
+  padding: 10px;
+  margin: 10px 0;
+  background: #fff;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+details summary {
+  cursor: pointer;
+  margin: 8px 0;
+}
+
+.submit-row {
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#submitBtn {
+  padding: 10px 14px;
+}
