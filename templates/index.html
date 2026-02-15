@@ -17,7 +17,7 @@
           <li>
             📘
             <a
-              href="https://dl.dropboxusercontent.com/scl/fi/e7i4985wuf1ox88c1i491/UHI-Research-Ethics-Iain-McClosky.pdf?rlkey=j0khxijgncezam9jywaeevlmc&dl=0"
+              href="https://dl.dropboxusercontent.com/scl/fi/yxpb93lvlfk3b5ur05ci3/UHI-Research-Ethics-IAIN-MCCLOSKY-12007248.pdf?rlkey=mw6gz3uyv48s56ayvr5jjynss"
               target="_blank"
               rel="noopener"
             >
@@ -27,11 +27,11 @@
           <li>
             📄
             <a
-              href="https://dl.dropboxusercontent.com/scl/fi/4uc8sh213d6u6575c3k28/CONSENT-FORM-12007248-IAIN-MCCLOSKY.pdf?rlkey=oaxlfo7hg3r13vki2c2ijalsw&dl=0"
+              href="https://dl.dropboxusercontent.com/scl/fi/1l5cvfgtu876brwx4paza/CONSENT-FORM-12007248-IAIN-MCCLOSKY.pdf?rlkey=dgththbxwb7etbl2pxlczzrlc"
               target="_blank"
               rel="noopener"
             >
-              Consent Form (optional)
+              Consent Form (please read before participating)
             </a>
           </li>
         </ul>
@@ -48,14 +48,20 @@
         </label>
 
         <label>
-          Gender:
+          Gender identity:
           <select name="gender" required>
             <option value="">Select</option>
             <option>Male</option>
             <option>Female</option>
-            <option>Other</option>
+            <option>Non-binary</option>
+            <option>Prefer to self-describe</option>
             <option>Prefer not to say</option>
           </select>
+        </label>
+
+        <label id="selfDescribeContainer" style="display:none;">
+          If you selected "Prefer to self-describe", please specify:
+          <input type="text" name="gender_self_describe">
         </label>
 
         <label>
@@ -137,7 +143,19 @@
   </main>
 
   <script src="/static/main.js"></script>
+
+  <script>
+    const genderSelect = document.querySelector('select[name="gender"]');
+    const selfDescribeContainer = document.getElementById('selfDescribeContainer');
+
+    genderSelect.addEventListener('change', function () {
+      if (this.value === "Prefer to self-describe") {
+        selfDescribeContainer.style.display = "block";
+      } else {
+        selfDescribeContainer.style.display = "none";
+      }
+    });
+  </script>
+
 </body>
 </html>
-
-<!-- your index.html will go here -->
